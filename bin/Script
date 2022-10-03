@@ -1,0 +1,54 @@
+1 Design Patterns (Tasarım Kalıpları)
+
+2 Design Patterns Nedir Tam Olarak? Ortak dil, ortak problemler, ortak çözümler Problem... çözüm?
+
+3 Design Patterns Nedir Tam Olarak? Tekerleği yeniden keşfetme! «İlla bu çözümleri mi kullanmak zorundayım? Kendim daha iyisini yaparım!» «Hmm... Bu sefer çok güzel oldu!»
+
+4 Peki Bu Bilgi Gerçek Hayatta Ne İşime Yarayacak? Ortak dilde konuşan ekip = mutlu ekip * * *: Head First Design Patterns
+
+5 Peki Bu Bilgi Gerçek Hayatta Ne İşime Yarayacak? Kod tabanı, daha rahat: Anlaşılabilir Güncellenebilir «Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.» - John F. Woods
+
+6 Peki... Kaç tane kalıp var? «Gang of Four» da kim? «Tasarım Kalıpları nda 20 yıllık deneyim, güleryüzlü hizmet!»
+
+7 Harika, Hemen Kullanmaya Başlıyorum! Amaç değil, araç Ne kazandık, ne kaybettik? KISS (Keep It Simple Stupid) * «Tek sayfalık uygulama için proje yöneticisi Symfony2 de diretince.» *: devops-tr
+
+8 Kaç Tip Tasarım Kalıbı var? Creational Yeni objelerin yaratılması Structural Farklı objelerin birbirleriyle ilişkilendirilerek bir bütün olması Behavioral Objeler arası iletişim kurulması *
+
+
+9 Singleton (Creational) Yalnızca 1 objeye ihtiyacımız var Objeye her sınıftan erişebilmemiz lazım Obje ihtiyacımız olana kadar yaratılmasın (lazy initialization) *
+
+10 Abstract Factory (Creational) Örneğin, çalıştığı platformdan bağımsız bir uygulama geliştirmek istiyoruz Benzer özelliklere sahip objelerimiz var Benzer objelerin yaratılma mantığını, objelerin yaratılacağı sınıfları (concrete class) tek tek belirtmeden, kontrata (interface) bağlı gruplamak istiyoruz Sınıf belirtilm... kontrat... kurgu... ne?!? *
+
+11 Abstract Factory (Creational) *
+
+12 Builder (Creational) Kompleks yapıda bir objemiz var (Motor vs. parçalara sahip bir araba veya değişken içeriğe sahip bir fast-food menüsü gibi) Objeyi oluşturmak için belli bir sırayı bozmadan, adım adım işlemlerden geçmemiz gerekli *
+
+13 Builder (Creational) *
+
+14 Factory Method (Creational) Oluşturacağımız objenin tipini önceden belirtmek istemiyoruz Oluşturulacak obje factory metodu içerisinde runtime da belirlenecek *
+
+15 Prototype (Creational) Bir objenin özelliklerine sahip olan aynı tipte bir obje daha yaratmak istiyoruz (milyonlarca insan hücresi gibi) Yeni objede yapacağımız değişiklikler orijinal objeye etki etmeyecek (clone) *
+
+16 Adapter (Structural) Birbiriyle uyumsuz/çalışamayan sınıfları çalışabilir hale getirmek istiyoruz (Obje -> JSON, XML gibi) Aslında mevcut sınıf için "Wrapper class" kullanmış oluyoruz *
+
+17 Bridge (Structural) Birbirinden farklı, birden fazla interface ile kombinasyon oluşturarak soyutlama yapmak zorunda kaldık! Ne demek şimdi bu?!? Yapılan bu soyutlama birbirleriyle olan kombinasyonlara göre interface sayısına bağlı olarak permütasyon şeklinde artıyor Soyutlanan yapıyı soyutla ki interface çorbası oluşmasın *
+
+18 Bridge (Structural) *
+
+19 Composite (Structural) Basit objelerden ve bu basit objeleri barındıran kompleks objelerden oluşan bir yapı istiyoruz. «Her bir klasör içerisinde dosya olabilir ve bu dosyalar da, kendi içinde dosyalar barındıran bir klasör olabilir (rekürsif)» *
+
+20 Composite (Structural) *
+
+21 Decorator (Structural) Objelere dinamik olarak yeni sorumluluklar yükle/becerilerini arttır «James Bond ve bitmek bilmeyen özelliğe sahip silahları gibi» Sadece metodlar değil, property ler de eklenebilir/düzenlenebilir «İliğimizi kuruttun »
+
+22 Decorator (Structural)
+
+23 Facade (Structural) Birçok sistemi bir üst sistemde toplayarak bu alt sistemlere erişim kolaylığı sağla «Uğraşamam ben önce 1 e sonra 4 e sonra 7 ye basmakla, müşteri hizmetleriyle görüşmek istiyorum!»
+
+24 Facade (Structural)
+
+25 Flyweight (Structural) Birbirine benzer çok sayıda obje oluşturmak istiyoruz Bunu yaparken de memory i tüketmek istemiyoruz
+
+26 Flyweight (Structural) Birbirine benzer çok sayıda obje oluşturmak istiyoruz Bunu yaparken de memory i tüketmek istemiyoruz
+
+27 Proxy (Structural) Bol bol kaynak tüketen bir objeye sahibiz Bu sebeple, objeyi kullanmadan önce initialize etmek istemiyoruz
